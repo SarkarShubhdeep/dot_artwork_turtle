@@ -3,10 +3,10 @@ import turtle
 from turtle import Turtle, Screen
 import colorgram
 
-
 foli = Turtle()
 turtle.colormode(255)
 foli.speed('fastest')
+foli.hideturtle()
 foli.pu()
 
 
@@ -36,7 +36,6 @@ def get_image_colors(image):
 color_list = get_image_colors('green.jpg')
 
 
-
 def make_dot_line_right():
     for _ in range(10):
         foli.color(random.choice(color_list))
@@ -46,6 +45,7 @@ def make_dot_line_right():
     foli.forward(40)
     foli.left(90)
     foli.forward(60)
+
 
 def make_dot_line_left():
     for _ in range(9):
@@ -58,24 +58,10 @@ def make_dot_line_left():
     foli.forward(20)
 
 
-
-
-
-
 set_initial_position()
 for i in range(5):
     make_dot_line_right()
     make_dot_line_left()
 
-
-
-
-
-
-
-
-
-
 screen = Screen()
 screen.exitonclick()
-
